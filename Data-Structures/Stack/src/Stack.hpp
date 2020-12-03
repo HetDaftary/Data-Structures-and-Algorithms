@@ -25,6 +25,7 @@ template<class T> class Stack {
                 T* temp_arr = new T[2 * capacity];
                 copy(this -> arr, (this -> arr) + capacity, temp_arr);
                 capacity *= 2;
+                del this -> arr;
                 this-> arr = temp_arr;
             }
             this -> arr[tos++] = key;
@@ -40,7 +41,7 @@ template<class T> class Stack {
 
         void displayStack() {
             for (int i = 0; i < this -> tos; i++) {
-                cout << arr[i] << " ";
+                cout << this -> arr[i] << " ";
             } cout << endl;
         }
 };
