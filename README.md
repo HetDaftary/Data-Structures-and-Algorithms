@@ -7,7 +7,7 @@ The goes has folders src and tests where the src has the library to include and 
 Data-Structures:
   1. Stack
   2. Queue
-  3. Linked-Lists
+  3. Linked-Lists:
     3.1. Singly-Linked-Lists
     3.2. Circular-Linked-Lists
     3.3. Doubly-Linked-Lists
