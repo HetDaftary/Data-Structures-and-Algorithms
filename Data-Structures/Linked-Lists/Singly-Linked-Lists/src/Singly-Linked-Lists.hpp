@@ -50,12 +50,7 @@ template<class T> class SinglyLinkedList {
 
     public:
         /* Constructors for the linked list. */
-        SinglyLinkedList() {
-            head = NULL;
-            isSortedList = false;
-        }
-
-        SinglyLinkedList(bool isl) {
+        SinglyLinkedList(bool isl = false) {
             head = NULL;
             isSortedList = isl;
         } 

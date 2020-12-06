@@ -53,6 +53,7 @@ template<class T> class Queue {
                     copy((this -> arr) + (this -> front), (this -> arr) + (this -> rear) + 1, temp_arr);
                     rear -= front;
                     front = 0;
+                    delete this -> arr;
                     this -> arr = temp_arr;
                     (this -> capacity) = (this -> capacity)/ 2;
                 } 

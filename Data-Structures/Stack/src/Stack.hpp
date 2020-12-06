@@ -24,6 +24,7 @@ template<class T> class Stack {
             if (this -> tos == capacity) {
                 T* temp_arr = new T[2 * capacity];
                 copy(this -> arr, (this -> arr) + capacity, temp_arr);
+                delete this -> arr;
                 capacity *= 2;
                 this-> arr = temp_arr;
             }
@@ -35,7 +36,12 @@ template<class T> class Stack {
         }
 
         void pop() {
-            --(this -> tos);
+            if (this -> capacity < 2 * (this-> tos)) {
+                T* temp_arr = new T[tos];
+                copy(this -> arr, this -> arr + tos, temp_arr);
+                delete this -> arr;
+                this -> arr = temp_arr;
+            } --(this -> tos);
         }
 
         void displayStack() {
