@@ -242,7 +242,11 @@ template<class T> class SinglyLinkedList {
             return (n1 -> data < n2 -> data);
         }
 
-        void sortList() {
+        void sortList(bool toReverse = false) {
+            /*
+             * Note that sortList or returnSortedList does not set the boolean of is sorted to true. 
+             * If you want to get list with sorting has enforced property, use the setter of sorted list boolean.
+             */
             // Sorts this list in the pointer by moving pointers. 
             vector<Node<T>*> vec;
             Node<T>* tail = NULL;
@@ -254,17 +258,26 @@ template<class T> class SinglyLinkedList {
 
             sort(vec.begin(), vec.end(), comparatorForNode);
 
-            head = vec[0];
-            tail = vec[0];
-            for (int i = 1; i < vec.size(); i++) {
-                tail -> next = vec[i];
-                tail = tail -> next;
-            } tail -> next = NULL;
+            if (toReverse) { // Sorts in reverse manner. 
+                head = vec[0];
+                head -> next = NULL;
+                for (int i = 1; i < vec.size(); i++) {
+                    vec[i] -> next = head;
+                    head = vec[i];
+                }
+            } else { // Sorts normally. 
+                head = vec[0];
+                tail = vec[0];
+                for (int i = 1; i < vec.size(); i++) {
+                    tail -> next = vec[i];
+                    tail = tail -> next;
+                } tail -> next = NULL;
+            }
         }
 
-        SinglyLinkedList<T> returnSortedCopy() {
+        SinglyLinkedList<T> returnSortedCopy(bool toReverse = false) {
             SinglyLinkedList<T> copyOfList = makeCopy();
-            copyOfList.sortList();
+            copyOfList.sortList(toReverse);
             return copyOfList;
         }
-};
+};     

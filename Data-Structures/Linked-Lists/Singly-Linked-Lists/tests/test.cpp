@@ -62,7 +62,9 @@ int main() {
     list1.displayList();
 
     SinglyLinkedList<int> sortedCopy = copy.returnSortedCopy();
+    SinglyLinkedList<int> sortedCopy1 = copy.returnSortedCopy(true);
     copy.displayList();
     sortedCopy.displayList();
+    sortedCopy1.displayList();
     return 0;
 }
