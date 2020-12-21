@@ -4,13 +4,16 @@ Will be having class of each data structure in .hpp files which can be included 
 There is also a .cpp file which uses this library to test the functionalities. 
 The goes has folders src and tests where the src has the library to include and tests folders contains the .cpp files and we include the library there to  test it. 
 
-Data-Structures:
-  1. Stack
-  2. Queue
-  3. Linked-Lists:
-    3.1. Singly-Linked-Lists
-    3.2. Circular-Linked-Lists
-    3.3. Doubly-Linked-Lists
+Data-Structures-and-Algorithms:
+  Data-Structures:
+    Stack
+    Queue
+    Linked-Lists:
+      Singly-Linked-Lists 
+      Doubly-Linked-Lists
+      Circular-Linked-Lists 
+    
+For a data structure, say Stack, the folder has src and tests sub folder which 
 
 Explanation for the data strctures. 
 Stack: 
