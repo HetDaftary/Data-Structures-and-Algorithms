@@ -1,0 +1,2 @@
+# Contributors
+* [Het Daftary](https://github.com/HetDaftary)
