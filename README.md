@@ -7,13 +7,14 @@ For accessing a particular code in the folder, you just need to use the <b> incl
 Suppose, I want to use the code for all the data structures, just take out that folder of Data structures and place it in the code and when you want to including, just type, <b> include "Address_to_the_code/Data-Structures/includer.hpp"</b> and it includes the code for all the data structures. 
 Suppose I want to use a specific structure or algorithm, so take that folder include the code same method.
 
-# Strucure: 
-The structure is simple. 
+# How to find the exact needed code.  
+The directory structure is simple. 
 One .md file to explain and document the code. 
 The includer.hpp file containing the reference to the library to be used. 
 The code goes in src folder in .hpp files so we can include and use it. 
 The test code go in the tests folder inside the data structure or algorithm. 
 So, the over all folder for the a particular code folder have includer.hpp file, src folder, tests folder and an md file for explaination realted to it. 
+Go on to the links in the Index and get to the place. 
 
 # Index:
 <b> Data-Structures:</b>
