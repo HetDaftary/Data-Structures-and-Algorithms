@@ -7,7 +7,7 @@ For accessing a particular code in the folder, you just need to use the <b> incl
 Suppose, I want to use the code for all the data structures, just take out that folder of Data structures and place it in the code and when you want to including, just type, <b> include "Address_to_the_code/Data-Structures/includer.hpp"</b> and it includes the code for all the data structures. 
 Suppose I want to use a specific structure or algorithm, so take that folder include the code same method.
 
-# How to find the exact needed code.  
+# How to find the exact needed code?
 The directory structure is simple. 
 One .md file to explain and document the code. 
 The includer.hpp file containing the reference to the library to be used. 
