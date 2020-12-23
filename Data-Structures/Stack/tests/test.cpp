@@ -4,7 +4,7 @@ int main() {
     Stack<int> stk;
     for (int i = 0; i < 5; i++) {
         stk.push(i);
-        stk.displayStack();
+        stk.displayStack(cout);
     }
 
     cout << stk.peek() << endl;
