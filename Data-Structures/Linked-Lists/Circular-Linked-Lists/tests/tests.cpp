@@ -1,12 +1,11 @@
 #include "../includer.hpp"
 
 int main() {
-    DoublyLinkedList<int> ls;
-    
+    CircularLinkedList<int> ls;
+
     for (int i = 0; i < 5; i++) {
         ls.insertAtFront(i);
     } 
-    
     ls.reverse();
     ls.display(cout);
 
@@ -14,7 +13,7 @@ int main() {
         ls.insertAtFront(i);
     } ls.display(cout);
 
-    DoublyLinkedList<int> ls1(true);
+    CircularLinkedList<int> ls1(true);
     for (int i = 0; i < 5; i++) {
         ls1.insert(i);
     } ls1.display(cout);
@@ -24,10 +23,10 @@ int main() {
     // These lines throw exception and so commented for now. 
     // Can uncomment to see the thrown exception and use exception handling or see the exceptions. 
 
-    cout << ls.deleteOnce(3) << " " << ls.deleteOnce(10) << endl;
+    cout << ls.deleteOnce(4) << " " << ls.deleteOnce(10) << endl;
     ls.display(cout);
 
-    DoublyLinkedList<int> list3;
+    CircularLinkedList<int> list3;
 
     for(int i = 0; i < 5; i++) {
         list3.insertAtFront(3);
@@ -50,7 +49,8 @@ int main() {
     list3.deleteAll(3);
     list3.display(cout);
 
-    DoublyLinkedList<int> ls3; 
+
+    CircularLinkedList<int> ls3; 
     for (int i = 0; i < 5; i++) {
         ls3.insertAtFront(i);
     } cout << "before sorting: ";

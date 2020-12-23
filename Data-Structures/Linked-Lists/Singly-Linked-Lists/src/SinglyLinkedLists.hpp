@@ -1,6 +1,6 @@
 #include <iostream>
-#include <fstream>
-#include <vector>
+#include <fstream> // For getting the out interace from user.
+#include <vector> // For making copy of the list in O(n) time.
 using namespace std;
 
 template<class T> class SinglyLinkedList {
@@ -18,6 +18,7 @@ template<class T> class SinglyLinkedList {
                  */
                 Node(T data) { 
                     this -> data = data;
+                    this -> next = NULL;
                 }
         };
 
@@ -149,6 +150,19 @@ template<class T> class SinglyLinkedList {
                 newNode -> next = head;
                 head = newNode;
             }
+        }
+
+        /**
+         * Serach function.
+         * Returns boolean on the bases if data is there in the list or not.  
+         */
+        bool serach(T data) {
+            Node* head1 = head;
+
+            while(head1) {
+                if (head1 -> data == data) return true;                
+                head1 = head1->next;
+            } return false;
         }
 
         /* Deletion of the ndoe. */
