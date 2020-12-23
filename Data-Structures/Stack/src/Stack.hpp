@@ -45,9 +45,9 @@ template<class T> class Stack {
             } --(this -> tos);
         }
 
-        void displayStack(ostream& outStream) {
+        void displayStack(ostream& outStream, string sep = " ") {
             for (int i = 0; i < this -> tos; i++) {
-                outStream << this -> arr[i] << " ";
+                outStream << this -> arr[i] << sep;
             } outStream << endl;
         }
 };
