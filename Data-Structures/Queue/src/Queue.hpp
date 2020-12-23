@@ -70,10 +70,10 @@ template<class T> class Queue {
             return this -> arr[front];
         } 
 
-        void displayQueue(ostream& outStream) {
+        void displayQueue(ostream& outStream, string sep = " ") {
             if (!isEmpty()) {    
                 for (int i = front; i <= rear; i++) {
-                    outStream << this -> arr[i] << " ";
+                    outStream << this -> arr[i] << sep;
                 } outStream << endl;
             }
             // cout << this -> capacity << " front: " << this -> front << " rear: " << this -> rear << endl;
