@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 using namespace std;
 
 template<class T> class Stack {
@@ -44,9 +45,9 @@ template<class T> class Stack {
             } --(this -> tos);
         }
 
-        void displayStack() {
+        void displayStack(ostream& outStream) {
             for (int i = 0; i < this -> tos; i++) {
-                cout << this -> arr[i] << " ";
-            } cout << endl;
+                outStream << this -> arr[i] << " ";
+            } outStream << endl;
         }
 };
