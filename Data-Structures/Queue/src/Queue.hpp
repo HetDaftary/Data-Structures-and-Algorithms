@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 using namespace std;
 
 template<class T> class Queue {
@@ -69,11 +70,11 @@ template<class T> class Queue {
             return this -> arr[front];
         } 
 
-        void displayQueue() {
+        void displayQueue(ostream& outStream) {
             if (!isEmpty()) {    
                 for (int i = front; i <= rear; i++) {
-                    cout << this -> arr[i] << " ";
-                } cout << endl;
+                    outStream << this -> arr[i] << " ";
+                } outStream << endl;
             }
             // cout << this -> capacity << " front: " << this -> front << " rear: " << this -> rear << endl;
         }
