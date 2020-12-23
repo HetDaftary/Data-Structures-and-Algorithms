@@ -337,6 +337,12 @@ template<class T> class CircularLinkedList {
             } head1 -> next = this -> head;
         } 
 
+        CircularLinkedList<T> getSortedCopy() {
+            DoublyLinkedList<T> copy = makeCopy();
+            copy.sort();
+            return copy;
+        }
+    
         /* Method to display the content of the list with outStream. */
         void display(ostream& outStream) {
             Node* head1 = this -> head;
