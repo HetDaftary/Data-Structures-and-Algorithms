@@ -19,6 +19,11 @@ template<class T> class Stack {
             this -> tos = 0;
             this -> capacity = initialCapacity;
         }
+    
+        /* is Empty function. */
+        bool isEmpty() {
+            return this -> tos;
+        }
 
         /* Methods to be used for the Stack. */
         void push(T key) {
