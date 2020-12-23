@@ -22,7 +22,7 @@ template<class T> class Stack {
     
         /* is Empty function. */
         bool isEmpty() {
-            return this -> tos;
+            return (this -> tos != 0);
         }
 
         /* Methods to be used for the Stack. */
