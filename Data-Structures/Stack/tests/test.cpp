@@ -1,4 +1,4 @@
-#include "../src/Stack.hpp"
+#include "../includer.hpp"
 
 int main() {
     Stack<int> stk;
