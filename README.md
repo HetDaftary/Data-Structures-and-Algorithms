@@ -16,7 +16,7 @@ The test code go in the tests folder inside the data structure or algorithm.
 So, the over all folder for the a particular code folder have includer.hpp file, src folder, tests folder and an md file for explaination realted to it. 
 Go on to the links in the Index and get to the place. 
 
-# Important notes:
+# Some notes to consider:
 * Compiler used: GNU/G++
 * Tested on OS: Linux(64 bit) 
 * The Preprocessor macros are used in the includer.hpp files has Windows uses different format for paths. 
