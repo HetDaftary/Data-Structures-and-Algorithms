@@ -19,7 +19,7 @@ Go on to the links in the Index and get to the place.
 # Important notes:
 * Compiler used: GNU G++
 * Tested on OS: Linux 
-* <b>If you find errors when compiling for Windows, you can change the paths of the library in includer.hpp files. </b>
+* The Preprocessor macros are used for the paths for Windows and other OS in includer.hpp
 * The relatives paths are used. So, directory from where you are running things can matter. 
 
 # Index:
