@@ -17,8 +17,8 @@ So, the over all folder for the a particular code folder have includer.hpp file,
 Go on to the links in the Index and get to the place. 
 
 # Important notes:
-* Compiler used: GNU G++
-* Tested on OS: Linux 
+* Compiler used: GNU/G++
+* Tested on OS: Linux(64 bit) 
 * The Preprocessor macros are used in the includer.hpp files has Windows uses different format for paths. 
 * The relatives paths are used. So, directory from where you are running things can matter. 
 
