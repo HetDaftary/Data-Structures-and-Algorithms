@@ -19,7 +19,7 @@ Go on to the links in the Index and get to the place.
 # Important notes:
 * Compiler used: GNU G++
 * Tested on OS: Linux 
-* The Preprocessor macros are used for the paths for Windows and other OS in includer.hpp
+* The Preprocessor macros are used in the includer.hpp files has Windows uses different format for paths. 
 * The relatives paths are used. So, directory from where you are running things can matter. 
 
 # Index:
