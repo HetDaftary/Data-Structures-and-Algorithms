@@ -16,6 +16,12 @@ The test code go in the tests folder inside the data structure or algorithm.
 So, the over all folder for the a particular code folder have includer.hpp file, src folder, tests folder and an md file for explaination realted to it. 
 Go on to the links in the Index and get to the place. 
 
+# Important notes:
+* Compiler used: GNU G++
+* Tested on OS: Linux 
+* <b>If you find errors when compiling for Windows, you can change the paths of the library in includer.hpp files. </b>
+* The relatives paths are used. So, directory from where you are running things can matter. 
+
 # Index:
 <b> Data-Structures:</b>
 * [Stack](https://github.com/HetDaftary/Data-Structures-and-Algorithms/tree/main/Data-Structures/Stack) 
