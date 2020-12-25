@@ -5,6 +5,6 @@
 #endif
 
 int main() {
-    towers(3, "A", "B", "C", cout);
+    cout << isPrime(4) << " " << isPrime(5) << endl;
     return 0;
 }
