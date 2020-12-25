@@ -12,13 +12,13 @@
 
 BubbleSort<int> sortObject;
 
-int arr[] = {1, 2, 4, 3};
-sortObject.sort(arr, compare_function);
+    int arr[] = {1, 2, 4, 3};
+    sortObject.sort(arr, compare_function);
 
 Compare_function:
 
-int compare_function(int a, int b) {
-    if (a > b) return 1;
-    if (a == b) return 0;
-    return -1;
-}  
+    int compare_function(int a, int b) {
+        if (a > b) return 1;
+        if (a == b) return 0;
+        return -1;
+    }  
