@@ -15,6 +15,7 @@ The code goes in src folder in .hpp files so we can include and use it.
 The test code go in the tests folder inside the data structure or algorithm. 
 So, the over all folder for the a particular code folder have includer.hpp file, src folder, tests folder and an md file for explaination realted to it. 
 Go on to the links in the Index and get to the place. 
+For Data-Structures, I am making a class and for Algorithms, I am normal functions and not in the class.   
 
 # Some notes to consider:
 * Compiler used: GNU/G++ for Linux, MinGW/G++ for Windows.
