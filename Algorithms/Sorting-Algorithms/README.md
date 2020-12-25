@@ -8,12 +8,13 @@
 * compare(a, b) should return 0 when the objects a and b are equal.
 * For normal sort, (i.e. sorting in ascending order.) The compare should return 1 when a > b and -1 when b < a.  
 * The sorting algorithms here just sort the arrays. If you want to sort liked lists, go the [linked-lists](https://github.com/HetDaftary/Data-Structures-and-Algorithms/tree/main/Data-Structures/Linked-Lists) section and get the algorithms. Take the sort and private methods which help the sort. 
-* Example: 
 
+Example:     
+  
     BubbleSort<int> sortObject;
     int arr[] = {1, 2, 4, 3};
     sortObject.sort(arr, compare_function);
-
+    
 Compare_function:
 
     int compare_function(int a, int b) {
