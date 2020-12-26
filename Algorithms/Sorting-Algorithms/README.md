@@ -10,6 +10,7 @@
 * The sorting algorithms here just sort the arrays. If you want to sort liked lists, go the [linked-lists](https://github.com/HetDaftary/Data-Structures-and-Algorithms/tree/main/Data-Structures/Linked-Lists) section and get the algorithms. Take the sort and private methods which help the sort. 
 Example:     
   
+  
     BubbleSort<int> sortObject;
     int arr[] = {1, 2, 4, 3};
     sortObject.sort(arr, 4, compare_function);
