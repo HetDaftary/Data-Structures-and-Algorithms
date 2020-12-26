@@ -1,6 +1,6 @@
 # Functionalities implemented:
-* <b>Sort function:</b> The function takes some arguments and sorts the stuff. 
-* <b>Return Sorted copy:</b> The function returns a new copy of the Array object which is sorted and the orginial one remains unaffected. 
+* <b>sort:</b> The function takes some arguments and sorts the stuff. 
+* <b>returnSortedCopy:</b> The function returns a new copy of the Array object which is sorted and the orginial one remains unaffected. 
 
 # Some important points:
 * <b>Unlike other algorithm codes, it uses a class for each sorting method.</b>
@@ -27,3 +27,9 @@ Compare_function:
 * You can directly use compare function if you want to sort in reverse way as you can just make a function to multiply -1 to compare_function. You can also see the snippets from the test code. 
 * Return type: int
 * Argument type is same as type given to bubble sort. 
+
+# Types of Sorting algorithms available: 
+* Bubble Sort
+* Merge Sort
+* Quick Sort
+* Heap Sort
