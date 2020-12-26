@@ -11,8 +11,9 @@
 
 Example:     
   
+    BubbleSort<int> sortObject;
     int arr[] = {1, 2, 4, 3};
-    BubbleSort.sort(arr, 4, compare_function);
+    sortObject.sort(arr, 4, compare_function);
     
 Compare_function:
 
@@ -21,3 +22,8 @@ Compare_function:
         if (a == b) return 0;
         return -1;
     }  
+
+# Details to note for compare_function:
+* You can directly use compare function if you want to sort in reverse way as you can just make a function to multiply -1 to compare_function. You can also see the snippets from the test code. 
+* Return type: int
+* Argument type is same as type given to bubble sort. 
