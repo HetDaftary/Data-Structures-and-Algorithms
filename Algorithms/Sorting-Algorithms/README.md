@@ -8,9 +8,6 @@
 * compare(a, b) should return 0 when the objects a and b are equal.
 * For normal sort, (i.e. sorting in ascending order.) The compare should return 1 when a > b and -1 when b < a.  
 * The sorting algorithms here just sort the arrays. If you want to sort liked lists, go the [linked-lists](https://github.com/HetDaftary/Data-Structures-and-Algorithms/tree/main/Data-Structures/Linked-Lists) section and get the algorithms. Take the sort and private methods which help the sort. 
-* Time: O(n^2)
-* Space: O(1)
-
 Example:     
   
     BubbleSort<int> sortObject;
@@ -31,7 +28,7 @@ Compare_function:
 * Argument type is same as type given to bubble sort. 
 
 # Types of Sorting algorithms available: 
-* Bubble Sort
-* Merge Sort
-* Quick Sort
-* Heap Sort
+* Bubble Sort: Time: <b>O(n^2)</b>, Space: <b>O(1)</b>
+* Merge Sort: Time: <b>O(n*log(n))</b>, Space: <b>O(n)</b>
+* Quick Sort: Time: <b>O(n^2) in worst case, Average: O(n*log(n))</b>, Space: <b>O(n)</b>
+* Heap Sort: Time: <b>O(n*log(n))</b>, Space: <b>O(1)</b>

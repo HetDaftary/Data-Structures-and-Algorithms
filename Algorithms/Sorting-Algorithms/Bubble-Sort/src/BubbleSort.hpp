@@ -26,7 +26,7 @@ template<class T> class BubbleSort {
         }
 
         /* Returns a sorted array. Original one remains unaffected. */
-        T* returnSortedCopy(T* arr, size_t size, void (*compare)(T a, T b)) {
+        T* returnSortedCopy(T* arr, size_t size, int (*compare)(T a, T b)) {
             
             T* new_arr = new T[size];
             copy(arr, arr + size, new_arr);
