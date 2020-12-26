@@ -1,6 +1,6 @@
 # Functionalities implemented:
-<b>Sort function:</b> The function takes some arguments and sorts the stuff. 
-<b>Return Sorted copy:</b> The function returns a new copy of the Array object which is sorted and the orginial one remains unaffected. 
+* <b>Sort function:</b> The function takes some arguments and sorts the stuff. 
+* <b>Return Sorted copy:</b> The function returns a new copy of the Array object which is sorted and the orginial one remains unaffected. 
 
 # Some important points:
 * <b>Unlike other algorithm codes, it uses a class for each sorting method.</b>
