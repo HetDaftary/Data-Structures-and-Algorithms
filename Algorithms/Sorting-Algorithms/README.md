@@ -11,9 +11,8 @@
 
 Example:     
   
-    BubbleSort<int> sortObject;
     int arr[] = {1, 2, 4, 3};
-    sortObject.sort(arr, compare_function);
+    BubbleSort.sort(arr, 4, compare_function);
     
 Compare_function:
 
