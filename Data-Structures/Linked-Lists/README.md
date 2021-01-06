@@ -16,6 +16,7 @@
 * <b>display:</b> Display the elements with given out interface and the separator(default is " "). 
 
 # Some important points:
+* <b> You have to make a [compare function](https://github.com/HetDaftary/Data-Structures-and-Algorithms/tree/main/Algorithms/Sorting-Algorithms) to sort</b> the objects of different class easily so you can get the result in the way you want. You can refer to it with the link. 
 * The class Node is a private class inside the class of the code. So the list can be easily implemented. 
 * The Constructor uses the default argument as false so both <b>SinglyLinkedList<int> ls;</b> and <b>SinglyLinkedList<int>ls(true);</b> act has valid declaration. 
 * <b>The isSorted property is to know if the list enforces the sorted insert or not. It is not a variable to see if the list is sorted or not at any time. Yes, isSorted = true means the list is sorted but if false, we need to check. </b>
