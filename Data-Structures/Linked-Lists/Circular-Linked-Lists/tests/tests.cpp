@@ -4,6 +4,16 @@
     #include "../includer.hpp"
 #endif
 
+int compare_function(int a, int b) {
+    if (a > b) return 1;
+    if (a == b) return 0;
+    return -1;
+}    
+
+int compare_function_descending(int a, int b) {
+    return -1 * compare_function(a, b);
+}
+
 int main() {
     CircularLinkedList<int> ls;
 
@@ -61,6 +71,9 @@ int main() {
     ls3.display(cout);
     ls3.setIsSorted(true);
     cout << "after sorting: ";
+    ls3.display(cout);
+    ls3.setIsSorted(false);
+    ls3.sort(compare_function_descending);
     ls3.display(cout);
 
     return 0;

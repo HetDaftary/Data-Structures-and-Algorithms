@@ -25,6 +25,14 @@ template<class T> class DoublyLinkedList {
         bool isSorted;
 
         /* Private methods that can help public methods go here. */
+
+        /* Default compare function. */
+        static int compare_function(T a, T b) {
+            if (a > b) return 1;
+            if (a == b) return 0;
+            return -1;
+        } 
+
         /* Methods for the sort algorithm. */
         Node *split(Node *head) {  
             Node *fast = head,*slow = head;  
@@ -37,31 +45,31 @@ template<class T> class DoublyLinkedList {
             return temp;  
         }  
 
-        Node* merge(Node *first, Node *second) {
+        Node* merge(Node *first, Node *second, int (*compare)(T a, T b)) {
             if (!first) return second;  
   
             if (!second) return first;  
   
-            if (first->data < second->data) {  
-                first->next = merge(first->next,second);  
+            if (compare(first->data, second->data) == -1) {  
+                first->next = merge(first->next,second, compare);  
                 first->next->prev = first;  
                 first->prev = NULL;  
                 return first;  
             } else {  
-                second->next = merge(first,second->next);  
+                second->next = merge(first,second->next, compare);  
                 second->next->prev = second;  
                 second->prev = NULL;  
                 return second;  
             }  
         } 
 
-        Node *mergeSort(Node *head) {  
+        Node *mergeSort(Node *head, int (*compare)(T a, T b)) {  
             if (!head || !head->next) return head;  
             Node *second = split(head);  
   
-            head = mergeSort(head);  
-            second = mergeSort(second); 
-            return merge(head,second);  
+            head = mergeSort(head, compare);  
+            second = mergeSort(second, compare); 
+            return merge(head, second, compare);  
         }  
 
     public:
@@ -79,7 +87,7 @@ template<class T> class DoublyLinkedList {
         void setIsSorted(bool toSet) {
             if (!isSorted && toSet) {
                 // We need to sort the list is if sorted was fals_heade in the midway and we want it to be true.
-                sort();
+                sort(compare_function);
             } 
 
             this -> isSorted = toSet;
@@ -276,8 +284,10 @@ template<class T> class DoublyLinkedList {
         }
 
         /* Sorting algorithm. Normal sort which sorts this list and a function to return sorted copy. */
-        void sort() {
-            this -> head = mergeSort(this -> head);
+        void sort(int (*compare)(T a, T b)) {
+            if (isSorted) return;
+
+            this -> head = mergeSort(this -> head, compare);
             Node* head1 = this -> head;
 
             if (head1) {
@@ -287,9 +297,9 @@ template<class T> class DoublyLinkedList {
             }
         }
 
-        DoublyLinkedList<T> getSortedCopy() {
+        DoublyLinkedList<T> getSortedCopy(int (*compare)(T a, T b)) {
             DoublyLinkedList<T> copy = makeCopy();
-            copy.sort();
+            copy.sort(compare);
             return copy;
         }
 

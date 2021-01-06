@@ -33,19 +33,26 @@ template<class T> class SinglyLinkedList {
 
         /* The private methods go here related to our list go here. */
 
+        /* Default compare function. */
+        static int compare_function(T a, T b) {
+            if (a > b) return 1;
+            if (a == b) return 0;
+            return -1;
+        } 
+
         /* Helper methods for the sorting of our list. */
-        Node* sortedMerge(Node* a, Node* b) { 
+        Node* sortedMerge(Node* a, Node* b, int (*compare)(T a, T b)) { 
             Node* result = NULL; 
   
             if (a == NULL) return (b); 
             else if (b == NULL) return (a); 
   
-            if (a->data <= b->data) { 
+            if (compare(a->data, b->data) != 1) { 
                 result = a; 
-                result->next = sortedMerge(a->next, b); 
+                result->next = sortedMerge(a->next, b, compare); 
             } else { 
                 result = b; 
-                result->next = sortedMerge(a, b->next); 
+                result->next = sortedMerge(a, b->next, compare); 
             } 
             return (result); 
         } 
@@ -71,7 +78,7 @@ template<class T> class SinglyLinkedList {
             slow->next = NULL; 
         }
 
-        void mergeSort(Node** addHead) { 
+        void mergeSort(Node** addHead, int (*compare)(T a, T b)) { 
             Node* head1 = *addHead; 
             Node* a; 
             Node* b; 
@@ -83,11 +90,11 @@ template<class T> class SinglyLinkedList {
             frontBackSplit(head1, &a, &b); 
   
             /* Recursively sort the sublists */
-            mergeSort(&a); 
-            mergeSort(&b); 
+            mergeSort(&a, compare); 
+            mergeSort(&b, compare); 
   
             /* answer = merge the two sorted lists together */
-            *addHead = sortedMerge(a, b); 
+            *addHead = sortedMerge(a, b, compare); 
         }
 
     public:
@@ -105,7 +112,7 @@ template<class T> class SinglyLinkedList {
         void setIsSorted(bool toSet) {
             if (!isSorted && toSet) {
                 // We need to sort the list is if sorted was false in the midway and we want it to be true.
-                sort();
+                sort(compare_function);
             } 
 
             this -> isSorted = toSet;
@@ -281,18 +288,21 @@ template<class T> class SinglyLinkedList {
         }
 
         /* Sorting algorithm. Normal sort which sorts this list and a function to return sorted copy. */
-        void sort() { 
+        void sort(int (*compare)(T a, T b)) { 
             /*
              * We will be using the merge sort algorithm for this given above in private section. 
              * As the algorithm is recursive and we do not want that our head to get seen, we write this function which calls merge sort for us. 
              * We select merge sort so the complexity becomes O(nlogn). 
              */
-            mergeSort(&(this -> head));
+
+            if (isSorted) return;
+
+            mergeSort(&(this -> head), compare);
         } 
 
-        SinglyLinkedList<T> getSortedCopy() {
+        SinglyLinkedList<T> getSortedCopy(int (*compare)(T a, T b)) {
             SinglyLinkedList<T> copy = makeCopy();
-            copy.sort();
+            copy.sort(compare);
             return copy;
         }   
 
