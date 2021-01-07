@@ -16,7 +16,7 @@
 * To make a fixed size queue:
   
         Queue<int, true> qu(1000);
-        // Makes a queue qu of size 1000 has fixed size.
+        // Makes a queue qu of size 1000, has fixed size.
 * To make a variable size queue:
         
         Queue<int, false> qu;
