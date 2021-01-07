@@ -2,20 +2,14 @@
 #include <fstream>
 using namespace std;
 
-template<class T> class Stack {
+template<class T, bool isFixedSize> class Stack {
     private:    
         T* arr;
         unsigned int tos, capacity;
     public:
         /* Constructors for Stack. */
-        Stack() { // Creating new empty stack. 
-            this -> arr = new T;
-            this -> tos = 0;
-            this -> capacity = 1;
-        }
-
-        Stack(int initialCapacity) {
-            this -> arr = new T[capacity];
+        Stack(int initialCapacity = 1) {
+            this -> arr = new T[initialCapacity];
             this -> tos = 0;
             this -> capacity = initialCapacity;
         }
@@ -27,12 +21,16 @@ template<class T> class Stack {
 
         /* Methods to be used for the Stack. */
         void push(T key) {
-            if (this -> tos == capacity) {
-                T* temp_arr = new T[2 * capacity];
-                copy(this -> arr, (this -> arr) + capacity, temp_arr);
-                delete this -> arr;
-                capacity *= 2;
-                this-> arr = temp_arr;
+            if (isFixedSize) {
+                if (this -> tos == capacity) throw "Overflow";
+            } else { 
+                if (this -> tos == capacity) {
+                    T* temp_arr = new T[2 * capacity];
+                    copy(this -> arr, (this -> arr) + capacity, temp_arr);
+                    delete this -> arr;
+                    capacity *= 2;
+                    this-> arr = temp_arr;
+                }
             }
             this -> arr[tos++] = key;
         }
@@ -42,12 +40,17 @@ template<class T> class Stack {
         }
 
         void pop() {
-            if (this -> capacity < 2 * (this-> tos)) {
-                T* temp_arr = new T[tos];
-                copy(this -> arr, this -> arr + tos, temp_arr);
-                delete this -> arr;
-                this -> arr = temp_arr;
-            } --(this -> tos);
+            if (isFixedSize) {
+                if (tos == 0) throw "Underflow";
+            } else {
+                if (this -> capacity < 2 * (this-> tos)) {
+                    T* temp_arr = new T[tos];
+                    copy(this -> arr, this -> arr + tos, temp_arr);
+                    delete this -> arr;
+                    this -> arr = temp_arr;
+                } 
+            }
+            --(this -> tos);
         }
 
         void displayStack(ostream& outStream, string sep = " ") {

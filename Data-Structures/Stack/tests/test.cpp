@@ -5,7 +5,7 @@
 #endif
 
 int main() {
-    Stack<int> stk;
+    Stack<int, false> stk;
     for (int i = 0; i < 5; i++) {
         stk.push(i);
         stk.displayStack(cout);
@@ -14,6 +14,16 @@ int main() {
     cout << stk.peek() << endl;
     stk.pop();
     cout << stk.peek() << endl;
+
+    Stack<int, true> stk1(5);
+    for (int i = 0; i < 5; i++) {
+        stk1.push(i);
+        stk1.displayStack(cout);
+    }
+
+    cout << stk1.peek() << endl;
+    stk1.pop();
+    cout << stk1.peek() << endl;
 
     return 0;
 }
