@@ -5,7 +5,8 @@
 #endif
 
 int main() {
-    Queue<int> qu;
+    // Without fixed size.
+    Queue<int, false> qu;
     for (int i = 0; i < 1000; i++) {
         qu.enqueue(i);
         qu.displayQueue(cout);
@@ -15,5 +16,18 @@ int main() {
         qu.dequeue();
         qu.displayQueue(cout);
     }
+
+    // With Fixed Size.
+    Queue<int, true> qu1(1000);
+    for (int i = 0; i < 1000; i++) {
+        qu1.enqueue(i);
+        qu1.displayQueue(cout);
+    }
+
+    while (!qu1.isEmpty()) {
+        qu1.dequeue();
+        qu1.displayQueue(cout);
+    }
+
     return 0;
 }
