@@ -32,4 +32,3 @@ Compare_function:
 * Bubble Sort: Time: <b>O(n^2)</b>, Space: <b>O(1)</b>
 * Merge Sort: Time: <b>O(n*log(n))</b>, Space: <b>O(n)</b>
 * Quick Sort: Time: <b>O(n^2) in worst case, Average: O(n*log(n))</b>, Space: <b>O(n)</b>
-* Heap Sort: Time: <b>O(n*log(n))</b>, Space: <b>O(1)</b>
