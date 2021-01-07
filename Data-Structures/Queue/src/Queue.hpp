@@ -107,8 +107,5 @@ template<class T, bool isFixedSize> class Queue {
                     outStream << endl;
                 }
             }
-
-            // To code more
-            // cout << this -> capacity << " front: " << this -> front << " rear: " << this -> rear << endl;
         }
 };
