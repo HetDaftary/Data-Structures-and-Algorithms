@@ -20,7 +20,7 @@
         
 * Make a Stack with variable size:
         
-        Stack<int, false> stk();
+        Stack<int, false> stk;
         
 * Push data to stack:
 
