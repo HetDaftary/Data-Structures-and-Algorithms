@@ -93,7 +93,7 @@ template<class T, bool isFixedSize> class Queue {
 
         void displayQueue(ostream& outStream, string sep = " ") {
             if (!isEmpty()) {    
-                if (front < rear) {    
+                if (front <= rear) {    
                     for (int i = front; i <= rear; i++) {
                         outStream << this -> arr[i] << sep;
                     } outStream << endl;
