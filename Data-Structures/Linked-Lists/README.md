@@ -32,7 +32,7 @@
         
         DoublyLinkedList<int> ls;
         // Makes a Doubly-linked-list.
-         search
+         
         CircularLinkedList<int> ls;
         // Makes a circular-linked-list.
         
