@@ -5,7 +5,7 @@
 * <b>setIsSorted:</b> Setter or mutator method for the isSorted property. 
 * <b>insert:</b> To insert data in the list. Inserts given data at last if normal list or inserts in sorted manner if sorted insert is enforced.
 * <b>insertAtFront:</b> Inserts data at the front of the list. 
-* <b>serach:</b> Searchs for the given data in the list. 
+* <b>search:</b> Searchs for the given data in the list. 
 * <b>deleteOnce:</b> Deletes the first occurence of the data. 
 * <b>deleteAll:</b> Deletes all the occurence of the data.
 * <b>makeCopy:</b> Returns a copy of the list.
@@ -23,3 +23,72 @@
 * The functions <b>insertAtFront and reverse cannot be used if the isSorted is true</b> and will throw exceptions in that case.
 * <b>The copies of the list have isSorted to false.</b> irrespective of the original list. 
 * We use Merge sort algorithm to do the task in O(nlogn) time.  
+
+# Code Snippets for Examples:
+* Make the linked list(We are using SinglyLinkedList for examples but you can change the types.):
+  
+        SinglyLinkedList<int> ls;
+        // Makes a Singly-linked-list.
+        
+        DoublyLinkedList<int> ls;
+        // Makes a Doubly-linked-list.
+         search
+        CircularLinkedList<int> ls;
+        // Makes a circular-linked-list.
+        
+* To know if the list enforces the sorted insert.
+        
+        bool ans = ls.getIsSorted();
+        
+* To set the rule for sorted insert:
+       
+       ls.setIsSorted();
+ 
+* To insert an element in the list:
+    
+        ls.insert(i);
+        
+ * To insert the element at front of the list:
+ 
+        ls.insertAtFront(i);
+
+* To serach for an element x in the list:
+  
+        bool ans = ls.search(x);
+        
+* To make a copy of the list:
+        
+        SinglyLinkedList lsCopy = ls.makeCopy();
+        
+* To delete all the occurances of an element from the list in a single iteration:
+        
+        ls.deleteAll();
+ 
+* To make a reverse copy of the list where original is unaffected:
+    
+        SinglyLinkedList lsCopy = ls.reverseCopy();
+        
+ * Sort the current lsit:
+ 
+        ls.sort();
+        
+ * To get the sorted copy where original is unaffected:
+  
+        ls.getSortedCopy();
+        
+* To display the list:
+        
+        ls.display(cout);
+        
+        // OR if you want to write in the file.
+        
+        ostream fileToWrite;
+        ls.display(fileToWrite);
+        
+* To see the peek(element that will be dequeued.):
+        
+        int p = qu.peek();
+ 
+* To reverse the list:
+    
+        ls.reverse();
