@@ -180,10 +180,10 @@ template<class T> class CircularLinkedList {
         }
 
         /**
-         * Serach function.
+         * Search function.
          * Returns boolean on the bases if data is there in the list or not.  
          */
-        bool serach(T data) {
+        bool search(T data) {
             Node* head1 = head;
 
             while(head1 -> next != this -> head) {
