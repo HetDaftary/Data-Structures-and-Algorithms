@@ -2,7 +2,7 @@
 #include <vector>
 using namespace std;
 
-double power(int x, int n) {
+double power(double x, int n) {
     int nTemp = n;
     double ans = 1;
     bool toInvert;
