@@ -3,6 +3,6 @@
 
 # Some important points:
 * Argument of type is unsigned int. 
-* Time: O(log(n)) for n as num.
+* Time: O(log(n)) for n as power.
 * Space: O(log(n))
 * Example: double ans = power(x, n);
