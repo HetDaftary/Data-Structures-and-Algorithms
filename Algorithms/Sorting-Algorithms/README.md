@@ -29,6 +29,7 @@ Compare_function:
 * Argument type is same as type given to bubble sort. 
 
 # Types of Sorting algorithms available: 
+* Insertion Sort: Time: <b>O(n^2)</b>, Space: <b>O(1)</b> 
 * Bubble Sort: Time: <b>O(n^2)</b>, Space: <b>O(1)</b>
 * Merge Sort: Time: <b>O(n*log(n))</b>, Space: <b>O(n)</b>
 * Quick Sort: Time: <b>O(n^2) in worst case, Average: O(n*log(n))</b>, Space: <b>O(n)</b>
