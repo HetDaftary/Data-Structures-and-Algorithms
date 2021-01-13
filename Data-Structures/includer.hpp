@@ -2,8 +2,10 @@
     #include "Queue\includer.hpp"
     #include "Stack\includer.hpp"
     #include "Linked-Lists\includer.hpp"
+    #include "Heaps\includer.hpp"
 #else 
     #include "Queue/includer.hpp"
     #include "Stack/includer.hpp"
     #include "Linked-Lists/includer.hpp"
+    #include "Heaps/includer.hpp"
 #endif
