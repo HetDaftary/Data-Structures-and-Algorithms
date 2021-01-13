@@ -28,6 +28,7 @@ For Data-Structures, I am making a class and for Algorithms, I am normal functio
 * [Stack](https://github.com/HetDaftary/Data-Structures-and-Algorithms/tree/main/Data-Structures/Stack) 
 * [Queue](https://github.com/HetDaftary/Data-Structures-and-Algorithms/tree/main/Data-Structures/Queue)
 * [Linked-Lists](https://github.com/HetDaftary/Data-Structures-and-Algorithms/tree/main/Data-Structures/Linked-Lists)
+* [Heaps](https://github.com/HetDaftary/Data-Structures-and-Algorithms/tree/main/Data-Structures/Heaps)
 
 <b> Algorithms:</b>
 * [Sorting-Algorithms](https://github.com/HetDaftary/Data-Structures-and-Algorithms/tree/main/Algorithms/Sorting-Algorithms)
