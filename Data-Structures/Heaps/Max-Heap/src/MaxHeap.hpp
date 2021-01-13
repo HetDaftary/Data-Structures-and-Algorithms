@@ -72,7 +72,7 @@ template<class T, bool isFixedSize> class MaxHeap {
             this -> capacity = sizeof(arr)/sizeof(arr[0]); 
             // Getting size of the arr.
             this->arr = new T[this-> capacity];
-            copy(arr, arr + this -> capacity, this -> arr);
+            copy(arr, arr + (this -> capacity), this -> arr);
             this -> elementCount = elementCount;
 
             heapify(0, 1, 2);
