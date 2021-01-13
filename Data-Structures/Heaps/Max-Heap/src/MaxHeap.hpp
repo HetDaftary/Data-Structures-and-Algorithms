@@ -27,13 +27,16 @@ template<class T, bool isFixedSize> class MaxHeap {
             }
         }
 
-        void helperForDelete(int root, int left, int right) {
+        void heapify(int root, int left, int right) {
+            // Heapifies the array.
+
             if ((left < (this -> elementCount)) && (this -> arr[left]) > (this -> arr[root])) {
                 swap(&(this -> arr[root]), &(this -> arr[left]));
-                helperForDelete(left, 2 * left + 1, 2 * left + 2);
-            } else if ((right < (this -> elementCount)) && ((this -> arr[right]) > (this -> arr[root]))) {
+                heapify(left, 2 * left + 1, 2 * left + 2);
+            } 
+            if ((right < (this -> elementCount)) && ((this -> arr[right]) > (this -> arr[root]))) {
                 swap(&(this -> arr[root]), &(this -> arr[right]));
-                helperForDelete(right, 2 * right + 1, 2 * right + 2);
+                heapify(right, 2 * right + 1, 2 * right + 2);
             } 
         }
 
@@ -43,7 +46,7 @@ template<class T, bool isFixedSize> class MaxHeap {
             swap(&(this -> arr[elementCount - 1]), &(this -> arr[0]));
             (this -> elementCount)--;
 
-            helperForDelete(0, 1, 2);            
+            heapify(0, 1, 2); // Heapifying code.       
 
             return to_return;
         }
@@ -71,6 +74,8 @@ template<class T, bool isFixedSize> class MaxHeap {
             this->arr = new T[this-> capacity];
             copy(arr, arr + this -> capacity, this -> arr);
             this -> elementCount = elementCount;
+
+            heapify(0, 1, 2);
         }
 
         bool isEmpty() {
