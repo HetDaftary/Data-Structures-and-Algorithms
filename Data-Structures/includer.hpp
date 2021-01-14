@@ -3,9 +3,11 @@
     #include "Stack\includer.hpp"
     #include "Linked-Lists\includer.hpp"
     #include "Heaps\includer.hpp"
+    #include "Binary-Search-Tree\includer.hpp"
 #else 
     #include "Queue/includer.hpp"
     #include "Stack/includer.hpp"
     #include "Linked-Lists/includer.hpp"
     #include "Heaps/includer.hpp"
+    #include "Binary-Search-Tree/includer.hpp"
 #endif
