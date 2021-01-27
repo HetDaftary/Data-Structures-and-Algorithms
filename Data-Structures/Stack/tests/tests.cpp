@@ -3,6 +3,7 @@
 #else 
     #include "../includer.hpp"
 #endif
+using namespace std;
 
 int main() {
     Stack<int, false> stk;

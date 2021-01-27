@@ -1,61 +1,39 @@
-#include <iostream>
-#include <fstream>
-using namespace std;
+#include "StackTypes.hpp"
 
 template<class T, bool isFixedSize> class Stack {
-    private:    
-        T* arr;
-        unsigned int tos, capacity;
-    public:
-        /* Constructors for Stack. */
-        Stack(int initialCapacity = 1) {
-            this -> arr = new T[initialCapacity];
-            this -> tos = 0;
-            this -> capacity = initialCapacity;
-        }
+    private:
+        #if isFixedSize 
+            StackFixedSize<T>* stk;
+        #else 
+            StackVariableSize<T>* stk;
+        #endif
     
-        /* is Empty function. */
-        bool isEmpty() {
-            return (this -> tos != 0);
+    public:
+        Stack(int capacity = 1) {
+            #if isFixedSize
+                stk = new StackFixedSize<T>(capacity);
+            #else 
+                stk = new StackVariableSize<T>(capacity);
+            #endif
         }
 
-        /* Methods to be used for the Stack. */
+        bool isEmpty() {
+            return stk -> isEmpty();
+        }
+
         void push(T key) {
-            if (isFixedSize) {
-                if (this -> tos == capacity) throw "Overflow";
-            } else { 
-                if (this -> tos == capacity) {
-                    T* temp_arr = new T[2 * capacity];
-                    copy(this -> arr, (this -> arr) + capacity, temp_arr);
-                    delete this -> arr;
-                    capacity *= 2;
-                    this-> arr = temp_arr;
-                }
-            }
-            this -> arr[tos++] = key;
+            stk -> push(key);
         }
 
         T peek() {
-            return this -> arr[tos - 1];
+            return stk -> peek();
         }
 
-        void pop() {
-            if (isFixedSize) {
-                if (tos == 0) throw "Underflow";
-            } else {
-                if (this -> capacity < 2 * (this-> tos)) {
-                    T* temp_arr = new T[tos];
-                    copy(this -> arr, this -> arr + tos, temp_arr);
-                    delete this -> arr;
-                    this -> arr = temp_arr;
-                } 
-            }
-            --(this -> tos);
+        bool pop() {
+            return stk -> pop();
         }
 
-        void displayStack(ostream& outStream, string sep = " ") {
-            for (int i = 0; i < this -> tos; i++) {
-                outStream << this -> arr[i] << sep;
-            } outStream << endl;
+        void displayStack(std::ostream& outStream, std::string sep = " ") {
+            stk -> displayStack(outStream, sep);
         }
 };
