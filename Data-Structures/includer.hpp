@@ -3,9 +3,11 @@
     #include "Stack\includer.hpp"
     #include "Linked-Lists\includer.hpp"
     #include "Tree\includer.hpp"
+    #include "Priority-Queue\includer.hpp"
 #else 
     #include "Queue/includer.hpp"
     #include "Stack/includer.hpp"
     #include "Linked-Lists/includer.hpp"
     #include "Tree/includer.hpp"
+    #include "Priority-Queue/includer.hpp"
 #endif
