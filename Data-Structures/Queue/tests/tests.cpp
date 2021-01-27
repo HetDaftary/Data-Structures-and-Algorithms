@@ -6,7 +6,7 @@
 
 int main() {
     // Without fixed size.
-    Queue1<int, false> qu;
+    Queue<int, false> qu;
     for (int i = 0; i < 5; i++) {
         qu.enqueue(i);
         qu.displayQueue(cout);
@@ -18,7 +18,7 @@ int main() {
     }
 
     // With Fixed Size.
-    Queue1<int, true> qu1(5);
+    Queue<int, true> qu1(5);
     for (int i = 0; i < 5; i++) {
         qu1.enqueue(i);
         qu1.displayQueue(cout);
