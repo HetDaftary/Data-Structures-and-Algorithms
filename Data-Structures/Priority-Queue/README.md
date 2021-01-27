@@ -1,7 +1,7 @@
 # Functionalities implemented:
 * <b>isEmpty:</b> The function to  know if our Queue is empty or not right now. 
-* <b>enqueue:</b> Pushes data into the Queue. 
-* <b>peek:</b> Returns the element at top of the Queue. Just shows use the element and does not remove it.
+* <b>enqueue:</b> Enters an element in the queue. 
+* <b>peek:</b> Returns the element at top of the Queue. Queue remains unchanged.
 * <b>dequeue:</b> removes an element from the queue. 
 * <b>displayQueue:</b> Displays all the elements in a space separated manner of the queue to a given out file, "cout" if you want to write to standard out. 
 
